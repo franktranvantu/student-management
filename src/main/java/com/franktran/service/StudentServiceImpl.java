@@ -28,4 +28,9 @@ public class StudentServiceImpl implements StudentService {
             System.out.printf("Sending email to %s%n", student.getName());
         }
     }
+
+    @Override
+    public Student getStudentById(int id) {
+        return studentDao.getStudentById(id);
+    }
 }
