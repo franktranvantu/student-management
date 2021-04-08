@@ -5,5 +5,6 @@
 </head>
 <body>
     <h1>Student Management</h1>
+    ${students}
 </body>
 </html>
