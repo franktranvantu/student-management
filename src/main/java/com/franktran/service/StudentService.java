@@ -1,10 +1,10 @@
-package com.franktran.dao;
+package com.franktran.service;
 
 import com.franktran.model.Student;
 
 import java.util.List;
 
-public interface StudentDao {
+public interface StudentService {
 
     List<Student> getStudentList();
 

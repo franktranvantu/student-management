@@ -1,7 +1,7 @@
 package com.franktran.controller;
 
-import com.franktran.dao.StudentDao;
 import com.franktran.model.Student;
+import com.franktran.service.StudentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,15 +13,15 @@ import java.util.List;
 @Controller
 public class StudentController {
 
-    private final StudentDao studentDao;
+    private final StudentService studentService;
 
-    public StudentController(StudentDao studentDao) {
-        this.studentDao = studentDao;
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
     }
 
     @GetMapping("/show-student-list")
     public String showStudentList(Model model) {
-        List<Student> students = studentDao.getStudentList();
+        List<Student> students = studentService.getStudentList();
         model.addAttribute("students", students);
         return "student-list";
     }
@@ -33,7 +33,7 @@ public class StudentController {
 
     @PostMapping("/create-student")
     public String createStudent(@ModelAttribute("student") Student student) {
-        studentDao.saveStudent(student);
+        studentService.createStudent(student);
         return "redirect:/show-student-list";
     }
 }
