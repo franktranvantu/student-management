@@ -1,7 +1,6 @@
 package com.franktran.controller;
 
 import com.franktran.dao.StudentDao;
-import com.franktran.dto.StudentDto;
 import com.franktran.model.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,13 +28,14 @@ public class StudentController {
     }
 
     @GetMapping("/show-create-student")
-    public String showCreateStudent(@ModelAttribute("studentDto") StudentDto studentDto) {
+    public String showCreateStudent(@ModelAttribute("student") Student student) {
         return "create-student";
     }
 
     @PostMapping("/create-student")
     @ResponseBody
-    public String createStudent(@ModelAttribute("studentDto") StudentDto studentDto) {
+    public String createStudent(@ModelAttribute("student") Student student) {
+        studentDao.saveStudent(student);
         return "Student saved!";
     }
 }

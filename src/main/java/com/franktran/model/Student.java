@@ -7,6 +7,8 @@ public class Student {
     private long mobile;
     private String country;
 
+    public Student() {}
+
     public Student(int id, String name, long mobile, String country) {
         this.id = id;
         this.name = name;

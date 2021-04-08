@@ -8,7 +8,7 @@
 <body>
     <h1 align="center">Add Student</h1>
     <div align="center">
-        <form:form action="create-student" method="post" modelAttribute="studentDto">
+        <form:form action="create-student" method="post" modelAttribute="student">
             <p>
                 <label for="name">Name:</label>
                 <from:input path="name" id="name" />

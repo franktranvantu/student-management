@@ -23,4 +23,10 @@ public class StudentDaoImpl implements StudentDao {
         String sql = "SELECT * FROM students";
         return jdbcTemplate.query(sql, studentRowMapper);
     }
+
+    @Override
+    public void saveStudent(Student student) {
+        String sql = "INSERT INTO students(name, mobile, country) VALUES (?, ?, ?)";
+        jdbcTemplate.update(sql, new Object[]{student.getName(), student.getMobile(), student.getCountry()});
+    }
 }
