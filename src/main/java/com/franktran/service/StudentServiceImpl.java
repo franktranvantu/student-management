@@ -5,6 +5,7 @@ import com.franktran.model.Student;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class StudentServiceImpl implements StudentService {
@@ -23,5 +24,8 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public void createStudent(Student student) {
         studentDao.createStudent(student);
+        if (Objects.equals(student.getCountry(), "Vietnam")) {
+            System.out.printf("Sending email to %s%n", student.getName());
+        }
     }
 }
