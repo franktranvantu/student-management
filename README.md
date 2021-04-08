@@ -1,6 +1,6 @@
-# Build a web page to display the students from database
+# Get data from database
 
-1. Configure dispatcher servlet
-2. Create a configuration file
-3. Create controllers
-4. Design views
+1. Create a POJO class
+   Student(id, name, mobile, country)
+2. Create a DAO
+   List<Student> getStudentList()
