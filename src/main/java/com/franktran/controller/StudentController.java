@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -33,9 +32,8 @@ public class StudentController {
     }
 
     @PostMapping("/create-student")
-    @ResponseBody
     public String createStudent(@ModelAttribute("student") Student student) {
         studentDao.saveStudent(student);
-        return "Student saved!";
+        return "redirect:/show-student-list";
     }
 }

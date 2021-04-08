@@ -7,6 +7,9 @@
 <body>
     <h1 align="center">Student Management</h1>
     <div align="center">
+        <form action="show-create-student">
+            <button>Create Student</button>
+        </form>
         <table border="1">
             <thead>
             <tr>
