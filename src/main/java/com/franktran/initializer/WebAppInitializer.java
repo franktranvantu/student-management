@@ -1,5 +1,6 @@
-package com.franktran.controller;
+package com.franktran.initializer;
 
+import com.franktran.config.DispatcherServletConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
