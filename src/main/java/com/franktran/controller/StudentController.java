@@ -33,7 +33,7 @@ public class StudentController {
 
     @PostMapping("/create-student")
     public String createStudent(@ModelAttribute("student") Student student) {
-        studentDao.saveStudent(student);
+        studentDao.createStudent(student);
         return "redirect:/show-student-list";
     }
 }

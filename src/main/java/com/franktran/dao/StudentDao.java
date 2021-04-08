@@ -8,5 +8,5 @@ public interface StudentDao {
 
     List<Student> getStudentList();
 
-    void saveStudent(Student student);
+    void createStudent(Student student);
 }
