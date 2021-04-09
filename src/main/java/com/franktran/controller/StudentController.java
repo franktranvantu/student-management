@@ -36,6 +36,6 @@ public class StudentController {
     @PostMapping("/create-student")
     @ResponseBody
     public String createStudent(@ModelAttribute("studentDto") StudentDto studentDto) {
-        return "Student saved!";
+        return "Student created!";
     }
 }
