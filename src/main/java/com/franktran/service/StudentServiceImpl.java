@@ -38,4 +38,9 @@ public class StudentServiceImpl implements StudentService {
     public void updateStudent(Integer id, Student student) {
         studentDao.updateStudent(id, student);
     }
+
+    @Override
+    public void deleteStudent(int id) {
+        studentDao.deleteStudent(id);
+    }
 }

@@ -4,6 +4,7 @@ import com.franktran.model.Student;
 import com.franktran.service.StudentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -50,5 +51,11 @@ public class StudentController {
         model.addAttribute("action", "Update");
         model.addAttribute("student", student);
         return "create-student";
+    }
+
+    @GetMapping("/delete-student/{id}")
+    public String deleteStudent(@PathVariable int id) {
+        studentService.deleteStudent(id);
+        return "redirect:/show-student-list";
     }
 }
