@@ -2,25 +2,25 @@ package com.franktran.model;
 
 public class Student {
 
-    private int id;
+    private Integer id;
     private String name;
     private Long mobile;
     private String country;
 
     public Student() {}
 
-    public Student(int id, String name, Long mobile, String country) {
+    public Student(Integer id, String name, Long mobile, String country) {
         this.id = id;
         this.name = name;
         this.mobile = mobile;
         this.country = country;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
